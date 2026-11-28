@@ -85,7 +85,7 @@ The known node types are:
 | 17   | BOX      | The ventilation box itself |
 | 18   | SWITCH   | Switch sensor |
 | 19   | ACTUAT   | — |
-| 20   | UCBATRH  | User Controller with Humidity sensor battery powered |
+| 20   | UCBATRH  | Battery powered User Controller with humidity sensor |
 | 21   | PWMIN    | — |
 | 22   | IAV      | Intelligent Air Valve |
 | 23   | IAVRH    | Intelligent Air Valve with humidity sensor |
@@ -116,7 +116,8 @@ The known node types are:
 | 48   | AO       | — |
 | 49   | CSCO2    | — |
 
-`UCRH`/`BSRH` and `UCCO2`/`BSCO2` share their type number; discovery lists a built-in sensor by its `BSRH` or `BSCO2`
+A built-in sensor reports the type of the user controller it is built on (10 or 12) with a built-in flag, so
+`UCRH`/`BSRH` and `UCCO2`/`BSCO2` share that number; discovery lists such a sensor by its `BSRH` (35) or `BSCO2` (37)
 name.
 
 With the addresses you can add sensors, for example the CO2 level and temperature of the CO2 sensors above:
